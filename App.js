@@ -17,7 +17,7 @@ const getSceneStyle = () => ({
     shadowRadius: 3,
 });
 
-class App extends Component<Props> {
+class App extends Component{
   render() {
     return (
         <Router getSceneStyle={getSceneStyle}>

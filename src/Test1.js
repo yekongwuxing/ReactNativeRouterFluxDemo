@@ -5,18 +5,21 @@ import {
     View
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-const Test1  = () => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.welcome}
-                  onPress={() => {
-                      Actions.test2()
 
-            }} >
-                Scarlet Screen
-            </Text>
-        </View>
-    );
+export default class Test1 extends Component{
+    render() {
+        return(
+            <View style={styles.container}>
+                <Text style={styles.welcome}
+                      onPress={() => {
+                          Actions.test2({username:'测试测试',password:'111111'})
+
+                      }} >
+                    Scarlet Screen
+                </Text>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -33,5 +36,3 @@ const styles = StyleSheet.create({
         color: '#ffffff',
     },
 });
-
-export default Test1;

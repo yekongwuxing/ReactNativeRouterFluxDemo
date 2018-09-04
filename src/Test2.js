@@ -4,15 +4,16 @@ import {
     Text,
     View
 } from 'react-native';
-
-const Test2 = () => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.welcome}>
-                gray
-            </Text>
-        </View>
-    );
+export default class Test2 extends Component{
+    render() {
+        return(
+            <View style={styles.container}>
+                <Text style={styles.welcome}>
+                    用户名：{this.props.username}  密码：{this.props.password}
+                </Text>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -30,4 +31,3 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Test2;
